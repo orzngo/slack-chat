@@ -1,0 +1,31 @@
+{
+  "name": "slack-chat",
+  "version": "0.0.1",
+  "description": "simple chat tool",
+  "main": "build/app.js",
+  "scripts": {
+    "prestart": "npm run build",
+    "start": "node ./build/app.js",
+    "clean": "rimraf ./build/*",
+    "build": "npm run clean & gulp"
+  },
+  "author": "orzlabo",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orzngo/chat-slack.git"
+  },
+  "dependencies": {
+    "@slack/client": "^3.14.2",
+    "@types/config": "0.0.33",
+    "config": "^1.28.1",
+    "gulp": "^3.9.1",
+    "rimraf": "^2.6.2",
+    "typescript": "^2.6.2"
+  },
+  "devDependencies": {
+    "gulp-typescript": "^3.2.3",
+    "run-sequence": "^2.2.0",
+    "webpack": "^3.8.1"
+  }
+}
